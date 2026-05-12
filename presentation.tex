@@ -153,7 +153,7 @@
 
     \column{0.48\textwidth}
     \begin{center}
-    \scalebox{0.82}{%
+    \resizebox{\linewidth}{!}{%
     \begin{tikzpicture}
       \node[draw=airbnbCoral, rounded corners, fill=airbnbCoral!10,
             text width=5.0cm, align=center, minimum height=0.85cm,
@@ -265,8 +265,8 @@
   \begin{columns}[T]
     \column{0.38\textwidth}
     \scriptsize
-    \begin{tabular}{>{\raggedright\arraybackslash}p{2.0cm}
-                    >{\raggedright\arraybackslash}p{3.3cm}}
+    \begin{tabular}{>{\raggedright\arraybackslash}p{1.7cm}
+                    >{\raggedright\arraybackslash}p{2.9cm}}
       \toprule
       \textbf{Step} & \textbf{Output}\\
       \midrule
@@ -284,10 +284,12 @@
       \bottomrule
     \end{tabular}
     \vspace{0.2cm}
-    \begin{block}{\small Final feature matrix}
-      \small\textbf{37 features} (union top-30 Lasso + top-20 RF)\\
+    {\setbeamerfont{block title}{size=\scriptsize}%
+     \setbeamerfont{block body}{size=\scriptsize}%
+    \begin{block}{Final feature matrix}
+      \textbf{37 features} (union top-30 Lasso + top-20 RF)\\
       on 63\,520 listings
-    \end{block}
+    \end{block}}
     \column{0.60\textwidth}
     \textbf{Feature selection --- 3 methods agree}\\[0.15cm]
     \includegraphics[width=\linewidth]{feature_selection_3panel.png}
@@ -303,7 +305,7 @@
 \section{Supervised Models}
 % ============================================================
 
-\begin{frame}{All 8 Models --- Performance Comparison}
+\begin{frame}[shrink=10]{All 8 Models --- Performance Comparison}
   \begin{columns}[T]
     \column{0.40\textwidth}
     \scriptsize
@@ -331,7 +333,7 @@
       \item Average error: \hl{\texteuro27} on \texteuro80 median
     \end{itemize}
     \column{0.58\textwidth}
-    \includegraphics[width=\linewidth]{model_comparison_full.png}
+    \includegraphics[width=\linewidth, height=0.62\textheight, keepaspectratio]{model_comparison_full.png}
   \end{columns}
 \end{frame}
 
@@ -353,8 +355,8 @@
       \item XGBoost \& Stacking: \tl{best balance} of performance and stability
       \item Tuned XGBoost (GridSearch): R\textsuperscript{2}=\textbf{0.658}
     \end{itemize}
-    \vspace{0.25cm}
-    \includegraphics[width=\linewidth]{gridsearch_heatmap.png}
+    \vspace{0.1cm}
+    \includegraphics[width=0.7\linewidth]{gridsearch_heatmap.png}
   \end{columns}
 \end{frame}
 
@@ -448,11 +450,13 @@
       \item Elevator, A/C, dishwasher: strong per-\texteuro uplift
       \item Wifi \& Kitchen: near-universal --- little marginal gain
     \end{itemize}
-    \vspace{0.2cm}
+    \vspace{0.1cm}
+    {\setbeamerfont{block title}{size=\footnotesize}%
+     \setbeamerfont{block body}{size=\footnotesize}%
     \begin{block}{Actionable insight}
-      \small Adding amenities with high premium \% to your listing
+      Adding amenities with high premium \% to your listing
       can justify a meaningful price increase.
-    \end{block}
+    \end{block}}
   \end{columns}
 \end{frame}
 
