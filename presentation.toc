@@ -1,0 +1,8 @@
+\beamer@sectionintoc {1}{Business Problem \& Dataset}{3}{0}{1}
+\beamer@sectionintoc {2}{Exploratory Data Analysis}{5}{0}{2}
+\beamer@sectionintoc {3}{Feature Engineering \& Selection}{9}{0}{3}
+\beamer@sectionintoc {4}{Supervised Models}{11}{0}{4}
+\beamer@sectionintoc {5}{Classification: Price Tiers}{16}{0}{5}
+\beamer@sectionintoc {6}{Amenity Analysis}{18}{0}{6}
+\beamer@sectionintoc {7}{Listing Segmentation}{21}{0}{7}
+\beamer@sectionintoc {8}{Business Recommendations}{26}{0}{8}
